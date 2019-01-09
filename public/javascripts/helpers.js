@@ -67,12 +67,20 @@ function isZero(time) {
 }
 
 function isOne(time) {
+    var display = $('#timer')[0];
+
     if (time == '00:01') {
+        stopTimer();
         setTimerColor('green');
         score++;
         $('#score').html(score);
         startTime += 1;
+        setTimerColor('black');
+        startTimer(startTime, display);
     } else {
+        stopTimer();
+        setTimerColor('red');
+        resetBtnState();
         score = 0;
         $('#score').html(score);
         startTime = 5;

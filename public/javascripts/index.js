@@ -12,7 +12,5 @@ $('#startBtn').on('click', function (e) {
 
 $('#stopBtn').on('click', function (e) {
     $('#timer').css('color', 'red');
-    stopTimer();
-    resetBtnState();
     isOne(time);
 });
