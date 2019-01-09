@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  .container
+    .row
+      h2 Timer
+    .row
+      h6#timer
+    .row
+      h2 Score
+    .row
+      h6#score
+    .row
+      button(type="button" class="btn btn-primary" id="startBtn") Start
+      button(type="button" class="btn btn-danger" id="stopBtn") Stop
+  include ./components/scriptIncludes/prereqScripts
