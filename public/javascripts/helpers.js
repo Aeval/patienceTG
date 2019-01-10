@@ -70,7 +70,7 @@ function isZero(time) {
         $('#timer').html('Time\'s Up!');
         checkHigh();
         score = 0;
-        startTime = 5;
+        startTime = 1;
         updScore();
     }
 }
@@ -84,7 +84,7 @@ function isOne(time) {
         score++;
         $('#score').html(score);
         checkHigh();
-        startTime += score;
+        startTime += 1;
         setTimerColor('white');
         startTimer(startTime, display);
     } else {
@@ -94,7 +94,7 @@ function isOne(time) {
         resetBtnState();
         score = 0;
         $('#score').html(score);
-        startTime = 5;
+        startTime = 1;
     }
 }
 
