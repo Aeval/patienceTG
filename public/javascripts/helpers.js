@@ -2,7 +2,7 @@ var activeTimer;
 var time;
 var IsOne;
 var score = 0;
-var startTime = 5;
+var startTime = 1;
 var highScore = 0;
 
 function checkHigh() {
