@@ -3,6 +3,14 @@ var time;
 var IsOne;
 var score = 0;
 var startTime = 5;
+var highScore = 0;
+
+function checkHigh() {
+    if (score > highScore){
+        highScore = score;
+        $('#highScore').html(highScore);
+    }
+}
 
 //Start or Stop timer
 function startTimer(startAt, display) {
@@ -60,6 +68,7 @@ function isZero(time) {
         setTimerColor('red');
         resetBtnState();
         $('#timer').html('Time\'s Up!');
+        checkHigh();
         score = 0;
         startTime = 5;
         updScore();
@@ -74,12 +83,14 @@ function isOne(time) {
         setTimerColor('green');
         score++;
         $('#score').html(score);
-        startTime += 1;
-        setTimerColor('black');
+        checkHigh();
+        startTime += score;
+        setTimerColor('white');
         startTimer(startTime, display);
     } else {
         stopTimer();
         setTimerColor('red');
+        checkHigh();
         resetBtnState();
         score = 0;
         $('#score').html(score);
