@@ -35,7 +35,7 @@ Clone the repo and edit. Submit a pull request for updates.
 ## Authors
 
 * **Harry Chilingerian** - *Concept and Consulting*
-* **Aeval** - Coding
+* **Aeval** - *Coding*
 
 ## License
 
